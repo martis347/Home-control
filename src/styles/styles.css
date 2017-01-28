@@ -1,0 +1,71 @@
+body {
+  transition: background-color .5s;
+  margin-left: 65px;
+  background-color: transparent;
+}
+
+a span {
+  color: #818181;
+}
+
+.sidenav {
+  height: 100%;
+  width: 55px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.expand {
+  width: 150px;
+}
+
+.naviItem {
+  color: #818181;
+  white-space: nowrap;
+}
+
+.naviItem:hover {
+  color: #f1f1f1;
+}
+
+.naviItem a {
+  white-space: nowrap;
+  padding-left: 5px;
+  position: relative;
+  bottom: 3px;
+  transition: 0.3s;
+}
+
+.naviItem span {
+  padding: 8px 8px 5px 15px;
+  white-space: nowrap;
+}
+
+.naviItem a, span {
+  color: inherit;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: "Glyphicons Halflings";
+  text-decoration: none;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .expand {
+    width: 120px;
+  }
+
+  .sidenav a, span {
+    font-size: 18px;
+  }
+}

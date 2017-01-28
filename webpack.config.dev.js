@@ -51,5 +51,5 @@ export default {
       {test: /\.json$/, loader: "json"}
     ]
   },
-  postcss: ()=> [autoprefixer]
+  postcss: () => [autoprefixer]
 };
