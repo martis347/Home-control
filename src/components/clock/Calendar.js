@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {translate} from "react-translate"
+import {translate} from "react-translate";
 
 @translate("Calendar")
 class Calendar extends React.Component {
@@ -8,25 +8,65 @@ class Calendar extends React.Component {
     super(props);
 
     this.state = {
-      calendar: {}
-    }
+      months: {
+        0: "JANUARY",
+        1: "FEBRUARY",
+        2: "MARCH",
+        3: "APRIL",
+        4: "MAY",
+        5: "JUNE",
+        6: "JULY",
+        7: "AUGUST",
+        8: "SEPTEMBER",
+        9: "OCTOBER",
+        10: "NOVEMBER",
+        11: "DECEMBER",
+      }
+    };
   }
 
   componentWillReceiveProps(nextProp) {
-    if (this.props.calendar != nextProp.calendar) {
+    if (this.props.calendar !== nextProp.calendar) {
       this.setState({calendar: nextProp.calendar});
     }
   }
 
+  shouldComponentUpdate(nextProps) {
+    return this.props.calendar.today !== nextProps.calendar.today;
+  }
+
+  days() {
+    let days = [];
+    let template = function (day, name) {
+      return <li><span className={name}>{day}</span></li>;
+    };
+
+    for (let i = 0; i < this.props.calendar.firstDay; i++) {
+      days.push(template(this.props.calendar.prevMonthDaysCount - i, 'inactive'));
+    }
+    for (let i = 1; i <= this.props.calendar.daysCount; i++) {
+      if (i === this.props.calendar.today) {
+        days.push(template(i, 'active'));
+      } else {
+        days.push(template(i));
+      }
+    }
+    let i = 1;
+    while (days.length % 7 != 0) {
+      days.push(template(i++, 'inactive'));
+    }
+
+    return days;
+  }
+
   render() {
     const {t} = this.props;
-
     return (
       <div className="calendar">
         <div className="month">
           <ul>
             <li style={{textAlign: 'center'}}>
-              {this.state.calendar.year + ", " + this.state.calendar.month}
+              {this.props.calendar.year + ", " + t(this.state.months[this.props.calendar.month])}
             </li>
           </ul>
         </div>
@@ -42,37 +82,7 @@ class Calendar extends React.Component {
         </ul>
 
         <ul className="days">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li><span className="active">10</span></li>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li>
-          <li>16</li>
-          <li>17</li>
-          <li>18</li>
-          <li>19</li>
-          <li>20</li>
-          <li>21</li>
-          <li>22</li>
-          <li>23</li>
-          <li>24</li>
-          <li>25</li>
-          <li>26</li>
-          <li>27</li>
-          <li>28</li>
-          <li>29</li>
-          <li>30</li>
-          <li>31</li>
+          {this.days()}
         </ul>
       </div>
     );
@@ -80,7 +90,8 @@ class Calendar extends React.Component {
 }
 
 Calendar.propTypes = {
-  calendar: PropTypes.object.isRequired
+  calendar: PropTypes.object.isRequired,
+  t: PropTypes.object
 };
 
 export default Calendar;

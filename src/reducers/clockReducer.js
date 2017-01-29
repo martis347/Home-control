@@ -14,6 +14,7 @@ export default function clockReducer(state = initialState.time, action) {
           firstDay: (new Date(year, month, 1).getDay() + 6) % 7,
           lastDay: (new Date(year, month + 1, 0).getDay() + 6) % 7,
           daysCount: new Date(year, month + 1, 0).getDate(),
+          prevMonthDaysCount: new Date(year, month, 0).getDate(),
           today: date.getDate(),
           month: date.getMonth(),
           year: date.getFullYear()

@@ -8,6 +8,7 @@ export default {
       firstDay: 0,
       lastDay: 0,
       daysCount: 0,
+      prevMonthDaysCount: 0,
       today:0,
       month: 0,
       year: 0

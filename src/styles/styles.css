@@ -48,7 +48,7 @@ a span {
   color: inherit;
 }
 
-.naviItem a, span {
+.naviItem a, .naviItem span {
   color: inherit;
   display: inline-block;
   cursor: pointer;
@@ -76,32 +76,38 @@ ul {
 
 .calendar {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
+  position:absolute;
+  top:0;
+  right:0;
+  width:20%;
+  margin: 20px 20px 0 0;
+  transition: 0.5s;
 }
 
 .month {
   padding: 10px 25px;
-  width: 20%;
   background: #0b113a;
   color: #bcbcbc;
+  border-radius: 25px 25px 0 0;
 }
 
 .month ul {
-  margin: 0;
   padding: 0;
+  margin: -3%;
 }
 
 .month ul li {
   color: #bcbcbc;
-  font-size: 20px;
+  font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
 .weekdays {
   margin: 0;
-  padding: 10px 0;
   background-color: #0f0f0f;
-  width: 20%;
+  font-size: 1.5em;
+  padding: 0px 7px 0px 7px;
 }
 
 .weekdays li {
@@ -115,7 +121,7 @@ ul {
   padding: 10px 0;
   background: #171819;
   margin: 0;
-  width: 20%;
+  border-radius: 0 0 25px 25px;
 }
 
 .days li {
@@ -123,17 +129,21 @@ ul {
   display: inline-block;
   width: 13.6%;
   text-align: center;
-  margin-bottom: 5px;
-  font-size: 12px;
-  color: #707070  ;
+  margin-bottom: 3px;
+  font-size: 1.2em;
+  color: #878787;
 }
 
 .days li .active {
-  border-radius: 13px;
-  padding: 0px 6px 4px 4px;
+  border-radius: 25px;
+  padding: 5px;
   background: #0c0d3d;
-  color: #bcbcbc !important;
-  font-size: 14px;
+  color: #cacaca !important;
+}
+
+.days li .inactive {
+  color: #404040 !important;
+  font-size: 0.8em;
 }
 
 @media screen and (max-height: 450px) {

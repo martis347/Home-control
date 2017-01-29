@@ -10,7 +10,7 @@ class ClockContainer extends React.Component {
     super(props);
 
     this.state = {
-      date: new Date().toUTCString()
+      calendar: {}
     };
   }
 
