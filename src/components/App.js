@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
-import Navigation from '../containers/Navigation';
+import Navigation from '../containers/NavigationContainer';
 
 class App extends React.Component {
   render() {

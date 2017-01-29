@@ -4,33 +4,40 @@ import NavigationComponent from '../components/navigation/NavigationComponent';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as navigationActions from '../actions/navigationActions';
+import { Swipeable  } from 'react-touch';
 
-class Navigation extends React.Component {
+class NavigationContainer extends React.Component {
   constructor(props) {
     super(props);
 
     this.toggleNavigation = this.toggleNavigation.bind(this);
   }
 
-  toggleNavigation(){
-    this.props.actions.toggle();
+  toggleNavigation(close){
+    this.props.actions.toggle(close);
   }
 
   render() {
     return (
-      <div onMouseEnter={this.toggleNavigation} onMouseLeave={this.toggleNavigation}>
+    <Swipeable onSwipeRight={() => this.toggleNavigation(false)}>
+      <div
+        onMouseEnter={() => this.toggleNavigation(false)}
+        onMouseLeave={() => this.toggleNavigation(true)}
+        onClick={() => this.toggleNavigation(true)}
+      >
         <NavigationComponent expand={this.props.expand} >
-          <NavigationItem link="" text="Home" expand={this.props.expand} glyphicon="glyphicon-home" />
-          <NavigationItem link="link1" text="Clock" expand={this.props.expand} glyphicon="glyphicon-time" />
+          <NavigationItem link="" text="Home" expand={this.props.expand} glyphicon="glyphicon-home"/>
+          <NavigationItem link="clock" text="Clock" expand={this.props.expand} glyphicon="glyphicon-time" />
           <NavigationItem link="link2" text="Controls" expand={this.props.expand} glyphicon="glyphicon-flash" />
           <NavigationItem link="link3" text="About" expand={this.props.expand} glyphicon="glyphicon-user" />
         </NavigationComponent>
       </div>
+    </Swipeable>
     );
   }
 }
 
-Navigation.propTypes = {
+NavigationContainer.propTypes = {
   actions: PropTypes.object.isRequired,
   expand: PropTypes.bool.isRequired
 };
@@ -47,4 +54,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navigation);
+export default connect(mapStateToProps, mapDispatchToProps)(NavigationContainer);

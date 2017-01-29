@@ -19,7 +19,7 @@ class NavigationComponent extends React.Component {
 
   render() {
     return (
-      <div className={this.props.expand ? 'sidenav expand' : 'sidenav'}>
+      <div className={this.props.expand ? 'sidenav expand' : 'sidenav'} >
         {this.children()}
       </div>
     );

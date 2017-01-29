@@ -26,12 +26,12 @@ a span {
 }
 
 .naviItem {
-  color: #818181;
+  color: #444b81;
   white-space: nowrap;
 }
 
 .naviItem:hover {
-  color: #f1f1f1;
+  color: #d5dcfc;
 }
 
 .naviItem a {
@@ -45,6 +45,7 @@ a span {
 .naviItem span {
   padding: 8px 8px 5px 15px;
   white-space: nowrap;
+  color: inherit;
 }
 
 .naviItem a, span {
@@ -52,8 +53,87 @@ a span {
   display: inline-block;
   cursor: pointer;
   font-size: 25px;
-  font-family: "Glyphicons Halflings";
+  font-family: "Glyphicons Halflings", "Bell MT", serif;
   text-decoration: none;
+}
+
+.dark {
+  background-color: black;
+}
+
+.clock {
+  font-size: 130px;
+  color: #bcbcbc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.calendar {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.month {
+  padding: 10px 25px;
+  width: 20%;
+  background: #0b113a;
+  color: #bcbcbc;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: #bcbcbc;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #0f0f0f;
+  width: 20%;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #5b5b5b;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #171819;
+  margin: 0;
+  width: 20%;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #707070  ;
+}
+
+.days li .active {
+  border-radius: 13px;
+  padding: 0px 6px 4px 4px;
+  background: #0c0d3d;
+  color: #bcbcbc !important;
+  font-size: 14px;
 }
 
 @media screen and (max-height: 450px) {
