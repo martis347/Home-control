@@ -1,6 +1,6 @@
 body {
   transition: background-color .5s;
-  margin-left: 65px;
+  margin-left: 3.5vw;
   background-color: transparent;
 }
 
@@ -10,19 +10,19 @@ a span {
 
 .sidenav {
   height: 100%;
-  width: 55px;
+  width: 3vw;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+  transition: 0.3s;
+  padding-top: 3vh;
 }
 
 .expand {
-  width: 170px;
+  width: 9vw;
 }
 
 .naviItem {
@@ -36,23 +36,22 @@ a span {
 
 .naviItem a {
   white-space: nowrap;
-  padding-left: 5px;
-  position: relative;
-  bottom: 3px;
   transition: 0.3s;
 }
 
 .naviItem span {
-  padding: 8px 8px 5px 15px;
+  padding: 0.3vh 0.5vw 0.5vh 1vw;
   white-space: nowrap;
   color: inherit;
+  position: relative;
+  bottom: -0.35vh
 }
 
 .naviItem a, .naviItem span {
   color: inherit;
   display: inline-block;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 1.4vw;
   font-family: "Glyphicons Halflings", "Bell MT", serif;
   text-decoration: none;
 }
@@ -62,8 +61,10 @@ a span {
 }
 
 .clock {
-  font-size: 130px;
+  font-size: 13vw;
   color: #bcbcbc;
+  margin: 0 0 0 4vw;
+  transition: 0.5s;
 }
 
 * {
@@ -79,83 +80,68 @@ ul {
   position:absolute;
   top:0;
   right:0;
-  width:20%;
-  margin: 20px 20px 0 0;
+  width: 30vw;
+  margin: 2vh 1.2vw 0 0;
   transition: 0.5s;
 }
 
 .month {
-  padding: 10px 25px;
+  padding: 0.8vh 0 0.5vw 0 ;
   background: #0b113a;
   color: #bcbcbc;
-  border-radius: 25px 25px 0 0;
+  border-radius: 2vw 2vw 0 0;
 }
 
 .month ul {
   padding: 0;
-  margin: -3%;
+  margin: -0.5vh;
+  font-size: 1.1vw;
 }
 
 .month ul li {
   color: #bcbcbc;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  font-size: 2.2vw;
+  letter-spacing: 0.3vw;
 }
 
 .weekdays {
   margin: 0;
   background-color: #0f0f0f;
-  font-size: 1.5em;
-  padding: 0px 7px 0px 7px;
+  font-size: 1.2vw;
+  padding: 0 0.4vw 0 0;
 }
 
 .weekdays li {
   display: inline-block;
-  width: 13.6%;
+  width: 4.05vw;
   color: #5b5b5b;
   text-align: center;
 }
 
 .days {
-  padding: 10px 0;
+  padding: 0.4vw 0;
   background: #171819;
   margin: 0;
-  border-radius: 0 0 25px 25px;
+  border-radius: 0 0 2vw 2vw;
 }
 
 .days li {
   list-style-type: none;
   display: inline-block;
-  width: 13.6%;
+  width: 4.05vw;
   text-align: center;
-  margin-bottom: 3px;
-  font-size: 1.2em;
+  font-size: 1.2vw;
   color: #878787;
 }
 
 .days li .active {
   border-radius: 25px;
-  padding: 5px;
+  padding: 0.7vh;
   background: #0c0d3d;
   color: #cacaca !important;
 }
 
 .days li .inactive {
   color: #404040 !important;
-  font-size: 0.8em;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-
-  .expand {
-    width: 120px;
-  }
-
-  .sidenav a, span {
-    font-size: 18px;
-  }
+  font-size: 0.9vw;
 }
