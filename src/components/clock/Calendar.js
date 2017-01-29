@@ -1,6 +1,17 @@
 import React, {PropTypes} from 'react';
+import {translate} from "react-translate"
 
+@translate("Calendar")
 class Calendar extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      calendar: {}
+    }
+  }
+
   componentWillReceiveProps(nextProp) {
     if (this.props.calendar != nextProp.calendar) {
       this.setState({calendar: nextProp.calendar});
@@ -8,24 +19,26 @@ class Calendar extends React.Component {
   }
 
   render() {
+    const {t} = this.props;
+
     return (
       <div className="calendar">
         <div className="month">
           <ul>
-            <li style={{textAlign:'center'}}>
-              2016, August
+            <li style={{textAlign: 'center'}}>
+              {this.state.calendar.year + ", " + this.state.calendar.month}
             </li>
           </ul>
         </div>
 
         <ul className="weekdays">
-          <li>Mo</li>
-          <li>Tu</li>
-          <li>We</li>
-          <li>Th</li>
-          <li>Fr</li>
-          <li>Sa</li>
-          <li>Su</li>
+          <li>{t("MONDAY")}</li>
+          <li>{t("TUESDAY")}</li>
+          <li>{t("WEDNESDAY")}</li>
+          <li>{t("THURSDAY")}</li>
+          <li>{t("FRIDAY")}</li>
+          <li>{t("SATURDAY")}</li>
+          <li>{t("SUNDAY")}</li>
         </ul>
 
         <ul className="days">
