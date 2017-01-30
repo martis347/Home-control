@@ -41,6 +41,11 @@ const translations = {
     OCTOBER: 'Spalis',
     NOVEMBER: 'Lapkritis',
     DECEMBER: 'Gruodis'
+  },
+  Weather: {
+    RAIN_PROBABILITY: 'Lietaus tikimybė',
+    TEMPERATURE: 'Temperatūra',
+    REAL_FEEL: 'Juntama temperatūra'
   }
 };
 

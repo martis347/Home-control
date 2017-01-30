@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react';
 import {ComposedChart, Line, Bar, XAxis, YAxis, Legend} from 'recharts';
+import {translate} from "react-translate";
 
+@translate('Weather')
 class Weather extends React.Component {
   static mightRain(element) {
     return element.rainProbability > 0;
@@ -31,6 +33,8 @@ class Weather extends React.Component {
 
   render() {
     if(!this.props.active) return null;
+    const {t} = this.props;
+
     return (
       <div className="weather">
         <ComposedChart width={window.innerWidth / 2.6} height={window.innerHeight / 2.3} data={this.state.data}
@@ -39,13 +43,13 @@ class Weather extends React.Component {
           {this.state.mightRain &&
           <YAxis axisLine={false} tickLine={false} orientation={'left'} yAxisId={'left'}/>}
           {this.state.mightRain &&
-          <Bar name={"Rain probability %"} dataKey="realFeelTemperature" barSize={window.innerWidth / 70} yAxisId="left"
+          <Bar name={t('RAIN_PROBABILITY') + ' %'} dataKey="realFeelTemperature" barSize={window.innerWidth / 70} yAxisId="left"
                fill="#0d1230"/>}
           <XAxis axisLine={false} tickLine={false} dataKey="hour" label={'hour'}/>
-          <Line name={"Temperature C°"} label={{fill: "#3F6E3A", fontSize: window.innerWidth / 120}}
+          <Line name={t('TEMPERATURE') + " C°"} label={{fill: "#3F6E3A", fontSize: window.innerWidth / 120}}
                 legendType={'diamond'} type="monotone" yAxisId="right" dataKey="temperature" stroke="#3F6E3A"
                 dot={false}/>
-          <Line name={'Real feel temperature C°'} label={{fill: '#135150', fontSize: window.innerWidth / 120}}
+          <Line name={t('REAL_FEEL') + ' C°'} label={{fill: '#135150', fontSize: window.innerWidth / 120}}
                 legendType={'diamond'} type="monotone" yAxisId="right" dataKey="realFeelTemperature" stroke="#135150"
                 dot={false}/>
           <Legend iconSize={5 + window.innerWidth / 100} wrapperStyle={{fontSize: 6 + window.innerWidth / 200}}/>
@@ -56,7 +60,8 @@ class Weather extends React.Component {
 }
 
 Weather.propTypes = {
-  active: PropTypes.bool.isRequired
+  active: PropTypes.bool.isRequired,
+  t: PropTypes.object
 };
 
 export default Weather;
