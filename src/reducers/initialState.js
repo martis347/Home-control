@@ -13,5 +13,6 @@ export default {
       month: 0,
       year: 0
     }
-  }
+  },
+  weather: []
 };

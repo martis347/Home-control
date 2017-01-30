@@ -2,6 +2,7 @@ body {
   transition: background-color .5s;
   margin-left: 3.5vw;
   background-color: transparent;
+  font-size: 0.9vw;
 }
 
 a span {
@@ -144,4 +145,10 @@ ul {
 .days li .inactive {
   color: #404040 !important;
   font-size: 0.9vw;
+}
+
+.weather {
+  position:absolute;
+  top: 40vh;
+  right: 0;
 }

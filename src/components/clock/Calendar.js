@@ -38,7 +38,7 @@ class Calendar extends React.Component {
   days() {
     let days = [];
     let template = function (day, name) {
-      return <li><span className={name}>{day}</span></li>;
+      return <li key={day + ' ' + name}><span className={name} >{day}</span></li>;
     };
 
     for (let i = 0; i < this.props.calendar.firstDay; i++) {
@@ -72,13 +72,13 @@ class Calendar extends React.Component {
         </div>
 
         <ul className="weekdays">
-          <li>{t("MONDAY")}</li>
-          <li>{t("TUESDAY")}</li>
-          <li>{t("WEDNESDAY")}</li>
-          <li>{t("THURSDAY")}</li>
-          <li>{t("FRIDAY")}</li>
-          <li>{t("SATURDAY")}</li>
-          <li>{t("SUNDAY")}</li>
+          <li key="51">{t("MONDAY")}</li>
+          <li key="52">{t("TUESDAY")}</li>
+          <li key="53">{t("WEDNESDAY")}</li>
+          <li key="54">{t("THURSDAY")}</li>
+          <li key="55">{t("FRIDAY")}</li>
+          <li key="56">{t("SATURDAY")}</li>
+          <li key="57">{t("SUNDAY")}</li>
         </ul>
 
         <ul className="days">

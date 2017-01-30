@@ -4,57 +4,74 @@ import {bindActionCreators} from 'redux';
 import * as clockActions from '../actions/clockActions';
 import Clock from '../components/clock/Clock';
 import Calendar from '../components/clock/Calendar';
+import Weather from '../components/clock/Weather';
+import * as weatherActions from '../actions/weatherActions';
 
 class ClockContainer extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      calendar: {}
+      calendar: {},
+      active: true
     };
   }
 
-  componentWillMount(){
-    this.props.actions.tick();
+  componentWillMount() {
+    this.props.clockActions.tick();
+    this.props.weatherActions.requestWeather()
+      .then(this.setState({active: !this.state.active}))
+      .catch(error => console.log(error));
     document.body.classList.toggle('dark', true);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     window.setInterval(function () {
-      this.props.actions.tick();
+      this.props.clockActions.tick();
     }.bind(this), 1000);
+    window.setInterval(function () {
+      this.props.weatherActions.requestWeather()
+        .then(this.setState({active: !this.state.active}))
+        .catch(error => console.log(error));
+    }.bind(this), 600000);
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     document.body.classList.toggle('dark', false);
   }
 
   render() {
     return (
       <div>
-        <Clock time={this.props.time} />
-        <Calendar calendar={this.props.calendar} />
+        <Clock time={this.props.time}/>
+        <Calendar calendar={this.props.calendar}/>
+        <Weather data={this.props.weather} active={this.state.active}/>
+        <Weather data={this.props.weather} active={!this.state.active}/>
       </div>
     );
   }
 }
 
 ClockContainer.propTypes = {
-  actions: PropTypes.object.isRequired,
+  clockActions: PropTypes.object.isRequired,
+  weatherActions: PropTypes.object.isRequired,
   time: PropTypes.string.isRequired,
-  calendar: PropTypes.object.isRequired
+  calendar: PropTypes.object.isRequired,
+  weather: PropTypes.array.isRequired
 };
 
 function mapStateToProps(state) {
   return {
     time: state.clock.time,
-    calendar: state.clock.calendar
+    calendar: state.clock.calendar,
+    weather: state.weather
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(clockActions, dispatch)
+    clockActions: bindActionCreators(clockActions, dispatch),
+    weatherActions: bindActionCreators(weatherActions, dispatch)
   };
 }
 
