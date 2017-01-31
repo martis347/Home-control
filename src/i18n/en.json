@@ -1,0 +1,47 @@
+{
+  "NavigationItem": {
+    "HOME": "Home",
+    "CLOCK": "Clock",
+    "CONTROLS": "Controls",
+    "ABOUT": "About"
+  },
+  "Calendar": {
+    "MONDAY": "Mo",
+    "TUESDAY": "Tu",
+    "WEDNESDAY": "We",
+    "THURSDAY": "Th",
+    "FRIDAY": "Fr",
+    "SATURDAY": "Sa",
+    "SUNDAY": "Su",
+
+    "JANUARY": "January",
+    "FEBRUARY": "February",
+    "MARCH": "March",
+    "APRIL": "April",
+    "MAY": "May",
+    "JUNE": "June",
+    "JULY": "July",
+    "AUGUST": "August",
+    "SEPTEMBER": "September",
+    "OCTOBER": "October",
+    "NOVEMBER": "November",
+    "DECEMBER": "December"
+  },
+  "Weather": {
+    "RAIN_PROBABILITY": "Rain probability %",
+    "TEMPERATURE": "Temperature C°",
+    "REAL_FEEL": "Real feel C°"
+  },
+  "LocalePicker": {
+    "ENGLISH": "English",
+    "LITHUANIAN": "Lithuanian"
+  },
+  "NotFoundPage": {
+    "ERROR": "Error",
+    "MISSING_PAGE": "The page you were looking for was not found."
+  },
+  "HomePage": {
+    "HOME": "Home page",
+    "DESCRIPTION": "React, Redux and React Router in EcmaScript 6 for ultra-responsive web apps."
+  }
+}

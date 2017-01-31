@@ -2,7 +2,7 @@ body {
   transition: background-color .5s;
   margin-left: 3.5vw;
   background-color: transparent;
-  font-size: 0.9vw;
+  font-size: vw;
 }
 
 a span {
@@ -23,7 +23,7 @@ a span {
 }
 
 .expand {
-  width: 9vw;
+  width: 12vw;
 }
 
 .naviItem {
@@ -78,16 +78,16 @@ ul {
 
 .calendar {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  position:absolute;
-  top:0;
-  right:0;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 30vw;
   margin: 2vh 1.2vw 0 0;
   transition: 0.5s;
 }
 
 .month {
-  padding: 0.8vh 0 0.5vw 0 ;
+  padding: 0.8vh 0 0.5vw 0;
   background: #0b113a;
   color: #bcbcbc;
   border-radius: 2vw 2vw 0 0;
@@ -148,7 +148,14 @@ ul {
 }
 
 .weather {
-  position:absolute;
+  position: absolute;
   top: 40vh;
   right: 0;
+}
+
+.localeSelector  {
+  font-size: calc(8px + 0.4vw);
+  position: absolute !important;
+  right: 1.2vh;
+  width: calc(50px + 5vw)!important;
 }

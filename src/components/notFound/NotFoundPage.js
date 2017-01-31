@@ -1,15 +1,22 @@
 import React from 'react';
+import NotFoundPage1 from './NotFoundPage1';
+import NotFoundPage2 from './NotFoundPage2';
+import NotFoundPage3 from './NotFoundPage3';
 
-class Navigation extends React.Component {
+class NotFoundPage extends React.Component {
+
   render() {
+    let randomNumber = Math.floor(Math.random() * 3) + 1;
+
+
     return (
       <div>
-        <h1><strong>Error 404</strong></h1>
-        <h2>The page you were looking for was not found.</h2>
-        <img src="https://cdn.instructables.com/FTU/1BBR/FLI8MT4O/FTU1BBRFLI8MT4O.MEDIUM.jpg"/>
+        {randomNumber == 1 && <NotFoundPage1/>}
+        {randomNumber == 2 && <NotFoundPage2/>}
+        {randomNumber == 3 && <NotFoundPage3/>}
       </div>
     );
   }
 }
 
-export default Navigation;
+export default NotFoundPage;

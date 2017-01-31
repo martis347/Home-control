@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
+import Translate from 'react-translate-component';
 
 class NavigationItem extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class NavigationItem extends React.Component {
       <div className="naviItem">
         <Link to={"/" + this.props.link}>
           <span className={this.props.glyphicon}/>
-          {this.state.expand && this.props.text}
+          {this.state.expand && <Translate content={'NavigationItem.' + this.props.text}/>}
         </Link>
       </div>
     );

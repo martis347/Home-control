@@ -1,12 +1,10 @@
 import React, {PropTypes} from 'react';
-import {translate} from "react-translate";
+import Translate from 'react-translate-component';
 
-@translate("Calendar")
 class Calendar extends React.Component {
 
   constructor(props) {
     super(props);
-
     this.state = {
       months: {
         0: "JANUARY",
@@ -60,25 +58,25 @@ class Calendar extends React.Component {
   }
 
   render() {
-    const {t} = this.props;
+
     return (
       <div className="calendar">
         <div className="month">
           <ul>
             <li style={{textAlign: 'center'}}>
-              {this.props.calendar.year + ", " + t(this.state.months[this.props.calendar.month])}
+              {this.props.calendar.year + ', '}{<Translate content={'Calendar.' + this.state.months[this.props.calendar.month]} />}
             </li>
           </ul>
         </div>
 
         <ul className="weekdays">
-          <li key="51">{t("MONDAY")}</li>
-          <li key="52">{t("TUESDAY")}</li>
-          <li key="53">{t("WEDNESDAY")}</li>
-          <li key="54">{t("THURSDAY")}</li>
-          <li key="55">{t("FRIDAY")}</li>
-          <li key="56">{t("SATURDAY")}</li>
-          <li key="57">{t("SUNDAY")}</li>
+          <li key="51"><Translate content={'Calendar.MONDAY'} /></li>
+          <li key="52"><Translate content={'Calendar.TUESDAY'} /></li>
+          <li key="53"><Translate content={'Calendar.WEDNESDAY'} /></li>
+          <li key="54"><Translate content={'Calendar.THURSDAY'} /></li>
+          <li key="55"><Translate content={'Calendar.FRIDAY'} /></li>
+          <li key="56"><Translate content={'Calendar.SATURDAY'} /></li>
+          <li key="57"><Translate content={'Calendar.SUNDAY'} /></li>
         </ul>
 
         <ul className="days">
@@ -90,8 +88,7 @@ class Calendar extends React.Component {
 }
 
 Calendar.propTypes = {
-  calendar: PropTypes.object.isRequired,
-  t: PropTypes.object
+  calendar: PropTypes.object.isRequired
 };
 
 export default Calendar;

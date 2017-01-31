@@ -1,14 +1,15 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import {Route, IndexRedirect} from 'react-router';
 import App from './App';
-import HomePage from './home/HomePage';
+import Home from '../containers/HomeContainer';
 import Clock from '../containers/ClockContainer';
 import NotFound from './notFound/NotFoundPage';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={HomePage}/>
-    <Route path="/clock" component={Clock}/>
+    <IndexRedirect to={"/home"}/>
+    <Route path="/(Home-control/)home" component={Home}/>
+    <Route path="/(Home-control/)clock" component={Clock}/>
     <Route path="*" component={NotFound}/>
   </Route>
 );

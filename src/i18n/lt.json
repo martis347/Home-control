@@ -1,0 +1,47 @@
+{
+  "NavigationItem": {
+    "HOME": "Pagrindinis",
+    "CLOCK": "Laikrodis",
+    "CONTROLS": "Valdikliai",
+    "ABOUT": "Kontaktai"
+  },
+  "Calendar": {
+    "MONDAY": "Pr",
+    "TUESDAY": "An",
+    "WEDNESDAY": "Tr",
+    "THURSDAY": "Kt",
+    "FRIDAY": "Pn",
+    "SATURDAY": "Še",
+    "SUNDAY": "Se",
+
+    "JANUARY": "Sausis",
+    "FEBRUARY": "Vasaris",
+    "MARCH": "Kovas",
+    "APRIL": "Balandis",
+    "MAY": "Gegužė",
+    "JUNE": "Birželis",
+    "JULY": "Liepa",
+    "AUGUST": "Rugpjūtis",
+    "SEPTEMBER": "Rugsėjis",
+    "OCTOBER": "Spalis",
+    "NOVEMBER": "Lapkritis",
+    "DECEMBER": "Gruodis"
+  },
+  "Weather": {
+    "RAIN_PROBABILITY": "Lietaus tikimybė %",
+    "TEMPERATURE": "Temperatūra C°",
+    "REAL_FEEL": "Juntama temperatūra C°"
+  },
+  "LocalePicker": {
+    "ENGLISH": "Anglų",
+    "LITHUANIAN": "Lietuvių"
+  },
+  "NotFoundPage": {
+    "ERROR": "Klaida",
+    "MISSING_PAGE": "Puslapis, kurio ieškojote, nebuvo rastas."
+  },
+  "HomePage": {
+    "HOME": "Pagrindinis puslapis",
+    "DESCRIPTION": "React, Redux ir React Router technologijos naudojant EcmaScript 6 sukuria itin greitą vartotojo sąsają."
+  }
+}

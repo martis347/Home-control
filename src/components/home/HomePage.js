@@ -1,11 +1,12 @@
 import React from 'react';
+import Translate from 'react-translate-component';
 
 class HomePage extends React.Component {
   render() {
     return (
       <div>
-        <h1>Home Page</h1>
-        <p>React, Redux and React Router in ES6 for ultra-responsive web apps.</p>
+        <Translate content={'HomePage.HOME'} component="h1"/>
+        <Translate content={'HomePage.DESCRIPTION'} component="p"/>
       </div>
     );
   }

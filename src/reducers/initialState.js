@@ -14,5 +14,6 @@ export default {
       year: 0
     }
   },
-  weather: []
+  weather: [],
+  locale: 'en'
 };
