@@ -9,7 +9,7 @@ import routes from './components/routes';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './styles/styles.css';
 import 'react-select/dist/react-select.css';
-import 'bootstrap/fonts/glyphicons-halflings-regular.woff2'
+import 'bootstrap/fonts/glyphicons-halflings-regular.woff2';
 
 const store = configureStore();
 

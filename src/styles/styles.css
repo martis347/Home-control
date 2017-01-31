@@ -159,3 +159,15 @@ ul {
   right: 1.2vh;
   width: calc(50px + 5vw)!important;
 }
+
+.notFound-lg {
+  width: 80vw;
+  height: 47vw;
+  transition: 1s;
+}
+
+.notFound-med {
+  width: 40vw;
+  height: 24vw;
+  transition: 1s;
+}
