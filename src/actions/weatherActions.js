@@ -25,7 +25,7 @@ export function requestWeather() {
   return function (dispatch) {
     dispatch(beginAjaxCall());
 
-    return fetchJsonp('http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/228309?apikey=qhUHn5Jnb4op7FRHGRXyEunk6M4tgYp1&details=true&metric=true')
+    return fetchJsonp('https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/228309?apikey=qhUHn5Jnb4op7FRHGRXyEunk6M4tgYp1&details=true&metric=true')
       .then(result => {
         return result.json();
       })
