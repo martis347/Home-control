@@ -149,15 +149,15 @@ ul {
 
 .weather {
   position: absolute;
-  top: 40vh;
+  top: 35vh;
   right: 0;
 }
 
-.localeSelector  {
+.localeSelector {
   font-size: calc(8px + 0.4vw);
   position: absolute !important;
   right: 1.2vh;
-  width: calc(50px + 5vw)!important;
+  width: calc(50px + 5vw) !important;
 }
 
 .notFound-lg {
@@ -170,4 +170,28 @@ ul {
   width: 40vw;
   height: 24vw;
   transition: 1s;
+}
+
+.comic {
+  width: 57vw;
+  margin-top: -2vh;
+}
+
+.comic img {
+  max-height: 28vw;
+}
+
+
+.quote-top {
+  font-size: 1.5vw;
+  width: 60vw;
+  color: #565555;
+}
+
+.quote-bottom {
+  font-size: 1.5vw;
+  width: 60vw;
+  color: #cccccc;
+  position: absolute;
+  bottom: 0;
 }

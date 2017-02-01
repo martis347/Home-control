@@ -15,12 +15,6 @@ class Weather extends React.Component {
     };
   }
 
-  componentDidMount() {
-    window.setInterval(function () {
-      this.forceUpdate();
-    }.bind(this), 1000);
-  }
-
   componentWillReceiveProps(nextProp) {
     if (this.state.data != nextProp.data) {
       this.setState({

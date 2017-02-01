@@ -15,5 +15,12 @@ export default {
     }
   },
   weather: [],
-  locale: 'en'
+  locale: 'en',
+  phpApiResult: {
+    comic: '',
+    quotes: {
+      humorists: '',
+      definitions: ''
+    }
+  }
 };

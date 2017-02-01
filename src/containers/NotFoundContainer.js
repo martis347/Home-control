@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import NotFound from '../components/notFound/NotFound';
 import {connect} from 'react-redux';
 
@@ -25,18 +25,12 @@ class NotFoundContainer extends React.Component {
 
   render() {
     let randomNumber = Math.floor(Math.random() * 3);
-    debugger;
     return (
-      <div className>
+      <div>
         <NotFound params={this.state.pictures[randomNumber]}/>
       </div>
     );
   }
 }
-
-NotFoundContainer.propTypes = {
-  changeLocale: PropTypes.func.isRequired
-};
-
 
 export default connect()(NotFoundContainer);
