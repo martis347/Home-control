@@ -1,7 +1,7 @@
 {
-  "name": "react-slingshot",
-  "version": "5.0.0",
-  "description": "Starter kit for creating apps with React and Redux",
+  "name": "home-control",
+  "version": "1.0.0",
+  "description": "Application for testing out react features and display UI for my Smart mirror (Clock Tab)",
   "engines": {
     "npm": ">=3"
   },
@@ -26,8 +26,6 @@
     "open:cover": "npm run test:cover && open coverage/index.html",
     "analyze-bundle": "babel-node ./tools/analyzeBundle.js"
   },
-  "author": "Cory House",
-  "license": "MIT",
   "dependencies": {
     "bootstrap": "3.3.6",
     "fetch-jsonp": "1.0.5",
@@ -102,24 +100,5 @@
     "webpack-dev-middleware": "1.9.0",
     "webpack-hot-middleware": "2.13.2",
     "webpack-md5-hash": "0.0.5"
-  },
-  "keywords": [
-    "react",
-    "reactjs",
-    "react-router",
-    "hot",
-    "reload",
-    "hmr",
-    "live",
-    "edit",
-    "webpack",
-    "redux",
-    "flux",
-    "boilerplate",
-    "starter"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/coryhouse/react-slingshot"
   }
 }
