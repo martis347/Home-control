@@ -3,7 +3,7 @@ import {Route, IndexRedirect, Redirect} from 'react-router';
 import App from './App';
 import Home from '../containers/HomeContainer';
 import Clock from '../containers/ClockContainer';
-import NotFound from '../containers/NotFoundContainer'
+import NotFound from '../containers/NotFoundContainer';
 
 export default (
   <Route path="/" component={App} >
