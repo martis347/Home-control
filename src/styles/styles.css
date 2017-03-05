@@ -2,7 +2,7 @@ body {
   transition: background-color .5s;
   margin-left: 3.5vw;
   background-color: transparent;
-  font-size: vw;
+  height: 100%
 }
 
 a span {
@@ -193,4 +193,88 @@ ul {
   color: #cccccc;
   position: absolute;
   bottom: 0;
+}
+
+.controls {
+  position: relative;
+}
+
+.br-slider {
+  display: inline-block;
+  margin: auto;
+}
+
+.colors {
+  display: inline-block;
+  text-align: right;
+  height: 180px;
+  top: 27px;
+  position: absolute;
+}
+
+.br-slider {
+  position: relative;
+  left: 75px;
+  width: 48px;
+  min-height: 30px;
+  text-align: right;
+}
+
+.br-slider input{
+  -webkit-appearance: slider-vertical;
+  height: 150px;
+}
+
+.br-slider label{
+  position: relative;
+  top:90px;
+  right: 36px
+}
+
+.rgb-sliders {
+  margin: 12px;
+  position: relative;
+  height: 150px;
+  left: 80px;
+  top: 25px;
+}
+
+.rgb-sliders input {
+  width: 220px;
+}
+
+.rgb-sliders label {
+  position: relative;
+  left:105px;
+}
+
+.slider {
+  display: inline-block;
+  width: 270px;
+}
+
+@media (max-width: 500px) {
+  body {
+    transition: background-color .5s;
+    margin-left: 15vw;
+    background-color: transparent;
+    height: 100%
+  }
+
+  .sidenav {
+    width: 10vw;
+  }
+
+  .expand {
+    width: 38vw;
+  }
+
+  .naviItem span {
+    padding-top: 3vh;
+    bottom: -0.35vh
+  }
+
+  .naviItem a, .naviItem span {
+    font-size: 25px;
+  }
 }
