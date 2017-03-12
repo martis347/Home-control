@@ -259,6 +259,33 @@ ul {
   width: 270px;
 }
 
+.clock-new {
+  font-family: 'Prime Regular', serif;
+  font-size: calc(7*(1vh + 1vw));
+  color: #d5e1d9;
+}
+
+.date-new {
+  font-family: 'Prime Regular', serif;
+  font-size: calc(2*(1vh + 1vw));
+  color: #d5e1d9;
+  position: relative;
+  bottom: calc(2*(1vh + 1vw));
+}
+
+
+.date-new .day{
+  position: relative;
+  bottom: calc(1*(1vh + 1vw));
+}
+
+@font-face {
+  font-family: 'Prime Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../styles/Roboto-Light.ttf") format("truetype");
+}
+
 @media (max-width: 500px) {
   body {
     transition: background-color .5s;

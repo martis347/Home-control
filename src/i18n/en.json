@@ -2,6 +2,7 @@
   "NavigationItem": {
     "HOME": "Home",
     "CLOCK": "Clock",
+    "CLOCK_NEW": "Clock(New)",
     "CONTROLS": "Controls",
     "ABOUT": "About"
   },
@@ -13,6 +14,14 @@
     "FRIDAY": "Fr",
     "SATURDAY": "Sa",
     "SUNDAY": "Su",
+
+    "MONDAY_LONG": "Monday",
+    "TUESDAY_LONG": "Tuesday",
+    "WEDNESDAY_LONG": "Wednesday",
+    "THURSDAY_LONG": "Thursday",
+    "FRIDAY_LONG": "Friday",
+    "SATURDAY_LONG": "Saturday",
+    "SUNDAY_LONG": "Sunday",
 
     "JANUARY": "January",
     "FEBRUARY": "February",

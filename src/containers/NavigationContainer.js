@@ -28,6 +28,7 @@ class NavigationContainer extends React.Component {
           <NavigationComponent expand={this.props.expand}>
             <NavigationItem link="home" text={"HOME"} expand={this.props.expand} glyphicon="glyphicon-home"/>
             <NavigationItem link="clock" text={"CLOCK"} expand={this.props.expand} glyphicon="glyphicon-time"/>
+            <NavigationItem link="dashboard" text={"CLOCK_NEW"} expand={this.props.expand} glyphicon="glyphicon-dashboard"/>
             <NavigationItem link="control" text={"CONTROLS"} expand={this.props.expand} glyphicon="glyphicon-flash"/>
             <NavigationItem link="link2" text={"ABOUT"} expand={this.props.expand} glyphicon="glyphicon-user"/>
           </NavigationComponent>
