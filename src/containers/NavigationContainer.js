@@ -26,10 +26,10 @@ class NavigationContainer extends React.Component {
           onClick={() => this.toggleNavigation(true)}
         >
           <NavigationComponent expand={this.props.expand}>
-            <NavigationItem link="Home-control/home" text={"HOME"} expand={this.props.expand} glyphicon="glyphicon-home"/>
-            <NavigationItem link="Home-control/clock" text={"CLOCK"} expand={this.props.expand} glyphicon="glyphicon-time"/>
-            <NavigationItem link="Home-control/control" text={"CONTROLS"} expand={this.props.expand} glyphicon="glyphicon-flash"/>
-            <NavigationItem link="Home-control/link2" text={"ABOUT"} expand={this.props.expand} glyphicon="glyphicon-user"/>
+            <NavigationItem link="home" text={"HOME"} expand={this.props.expand} glyphicon="glyphicon-home"/>
+            <NavigationItem link="clock" text={"CLOCK"} expand={this.props.expand} glyphicon="glyphicon-time"/>
+            <NavigationItem link="control" text={"CONTROLS"} expand={this.props.expand} glyphicon="glyphicon-flash"/>
+            <NavigationItem link="link2" text={"ABOUT"} expand={this.props.expand} glyphicon="glyphicon-user"/>
           </NavigationComponent>
         </div>
       </Swipeable>

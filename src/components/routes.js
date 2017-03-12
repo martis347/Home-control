@@ -8,11 +8,11 @@ import NotFound from '../containers/NotFoundContainer';
 
 export default (
   <Route path="/" component={App} >
-    <IndexRedirect to={"/Home-control/home"}/>
-    <Redirect from="/Home-control" to="/Home-control/home"/>
-    <Route path="/Home-control/home" component={Home}/>
-    <Route path="/Home-control/clock" component={Clock}/>
-    <Route path="/Home-control/control" component={Control}/>
+    <IndexRedirect to={"/home"}/>
+    <Redirect from="/" to="/home"/>
+    <Route path="/home" component={Home}/>
+    <Route path="/clock" component={Clock}/>
+    <Route path="/control" component={Control}/>
     <Route path="*" component={NotFound}/>
   </Route>
 );

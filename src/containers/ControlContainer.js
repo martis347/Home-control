@@ -7,15 +7,17 @@ class ControlContainer extends React.Component {
     super(props);
 
     this.state = {
-    }
+    };
   }
+
+
 
   render() {
     return (
       <div>
         <Controls/>
       </div>
-    )
+    );
   }
 }
 
