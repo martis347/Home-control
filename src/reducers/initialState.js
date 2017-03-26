@@ -22,5 +22,6 @@ export default {
       humorists: '',
       definitions: ''
     }
-  }
+  },
+  price: 0
 };

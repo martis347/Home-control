@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import Translate from 'react-translate-component';
 
 class DateC extends React.Component {

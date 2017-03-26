@@ -1,8 +1,7 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import Clock from '../components/dashboard/Clock';
 import Date from '../components/dashboard/DateC';
-import {bindActionCreators} from 'redux';
 
 class DashboardContainer extends React.Component {
   constructor(props) {
@@ -31,16 +30,12 @@ class DashboardContainer extends React.Component {
   }
 }
 
-DashboardContainer.propTypes = {
-
-};
-
-function mapStateToProps(state) {
+function mapStateToProps() {
   return {
   };
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps() {
   return {
   };
 }

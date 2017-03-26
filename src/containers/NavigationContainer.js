@@ -30,7 +30,7 @@ class NavigationContainer extends React.Component {
             <NavigationItem link="clock" text={"CLOCK"} expand={this.props.expand} glyphicon="glyphicon-time"/>
             <NavigationItem link="dashboard" text={"CLOCK_NEW"} expand={this.props.expand} glyphicon="glyphicon-dashboard"/>
             <NavigationItem link="control" text={"CONTROLS"} expand={this.props.expand} glyphicon="glyphicon-flash"/>
-            <NavigationItem link="link2" text={"ABOUT"} expand={this.props.expand} glyphicon="glyphicon-user"/>
+            <NavigationItem link="cars" text={"CAR_PRICES"} expand={this.props.expand} glyphicon="glyphicon-euro"/>
           </NavigationComponent>
         </div>
       </Swipeable>

@@ -20,13 +20,11 @@ class Slider extends React.Component {
   }
   componentWillMount() {
     let connection = new WebSocket('ws://192.168.31.210:81/', ['arduino']);
-    console.log("connect");
     this.setState({connection});
     connection.onmessage = this.updateState;
   }
 
   updateState = function (value) {
-    console.log(value.data);
     let values = value.data.split(' ');
     this.setState({mode: values[1], n1:parseInt(values[2]), n2:parseInt(values[3]), n3:parseInt(values[4])}, this.updateSliders);
   };
@@ -59,8 +57,6 @@ class Slider extends React.Component {
   };
 
   sendSocket = (broadcast) => {
-    console.log(this.state);
-    console.log(this.buildQuery(broadcast));
     this.state.connection.send(this.buildQuery(broadcast));
   };
   broadcastSliderValue = () => {
@@ -68,7 +64,6 @@ class Slider extends React.Component {
   };
 
   onSliderChange = value => {
-    console.log({backgroundColor: 'rgb(' + this.state.n1 * 2.55 + ', ' + this.state.n2 * 2.55 + ', ' + this.state.n3 * 2.55 + ')'});
     switch(value.target.name)
     {
       case "red":

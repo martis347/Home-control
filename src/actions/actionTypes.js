@@ -12,3 +12,5 @@ export const AJAX_CALL_ERROR = 'AJAX_CALL_ERROR';
 export const LOCALE_CHANGED = 'LOCALE_CHANGED';
 
 export const PHP_API_SUCCESS = 'PHP_API_SUCCESS';
+
+export const CAR_RATE_SUCCESS = 'CAR_RATE_SUCCESS';
