@@ -85,7 +85,7 @@ function mapStateToProps(state) {
   return {
     time: state.clock.time,
     calendar: state.clock.calendar,
-    weather: state.weather,
+    weather: state.weather.weather,
     phpResult: state.php
   };
 }

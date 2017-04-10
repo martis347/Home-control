@@ -86,7 +86,7 @@ ul {
   transition: 0.5s;
 }
 
-.month {
+.calendar .month {
   padding: 0.8vh 0 0.5vw 0;
   background: #0b113a;
   color: #bcbcbc;
@@ -261,23 +261,100 @@ ul {
 
 .clock-new {
   font-family: 'Prime Regular', serif;
-  font-size: calc(7*(1vh + 1vw));
-  color: #d5e1d9;
+  font-size: calc(10*(1vh + 1vw));
+  color: white;
 }
 
 .date-new {
   font-family: 'Prime Regular', serif;
-  font-size: calc(2*(1vh + 1vw));
-  color: #d5e1d9;
+  font-size: calc(3*(1vh + 1vw));
+  color: white;
   position: relative;
-  bottom: calc(2*(1vh + 1vw));
+  bottom: calc(3*(1vh + 1vw));
 }
 
 
-.date-new .day{
+.date-new .month{
   position: relative;
   bottom: calc(1*(1vh + 1vw));
 }
+
+.date-new .text{
+  display: inline-block;
+}
+
+.date-new .day{
+  font-size: calc(7*(1vh + 1vw));
+  position: relative;
+  top: calc(-1.1*(1vh + 1vw));
+  left: calc(0.5*(1vh + 1vw));
+  color: #9199ed;
+  display: inline-block;
+}
+
+.weather-new {
+  position: absolute;
+  top: calc(1*(1vh + 1vw));
+  right: calc(10 *(1vh + 1vw));
+}
+
+.first-line > div{
+  display: inline-block;
+  position: absolute;
+}
+
+.weather-new .weather-icon{
+  width: calc(13*(1vh + 1vw));
+  right: -5vh;
+  top: 2vh;
+}
+
+.weather-new .weather-text{
+  font-family: 'Prime Regular', serif;
+  font-size: calc(5.2*(1vh + 1vw));
+  color: white;
+}
+
+.weather-chart .recharts-cartesian-axis-tick text{
+  fill: white !important;
+
+}
+
+.weather-chart {
+  position: absolute; /* or absolute */
+  top: 50%;
+  right:40%;
+}
+
+.future-weather .icon{
+  width: calc(4*(1vh + 1vw));
+}
+
+.future-weather .text{
+  color: white;
+  font-size: calc(1.8*(1vh + 1vw));
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  position: relative;
+  bottom: calc(0.3*(1vh + 1vw));
+
+ }
+
+.future-weather .day > div{
+  display: inline-block;
+}
+
+.future-weather .day {
+  width: auto;
+}
+
+.future-weather {
+  text-align: right;
+  margin-right: calc(2*(1vh + 1vw));
+  position: absolute;
+  right:0;
+  top: calc(10*(1vh + 1vw));
+}
+
 
 .carForm label {
   padding-right: 5px;

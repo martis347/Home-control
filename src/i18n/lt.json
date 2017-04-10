@@ -15,6 +15,22 @@
     "SATURDAY": "Še",
     "SUNDAY": "Se",
 
+    "MONDAY_1": "Pir",
+    "TUESDAY_1": "Ant",
+    "WEDNESDAY_1": "Tre",
+    "THURSDAY_1": "Ket",
+    "FRIDAY_1": "Pen",
+    "SATURDAY_1": "Šeš",
+    "SUNDAY_1": "Sek",
+
+    "MONDAY_LONG": "Pirmadienis",
+    "TUESDAY_LONG": "Antradienis",
+    "WEDNESDAY_LONG": "Trečiadienis",
+    "THURSDAY_LONG": "Ketvirtadienis",
+    "FRIDAY_LONG": "Penktadienis",
+    "SATURDAY_LONG": "Šeštadienis",
+    "SUNDAY_LONG": "Sekmadienis",
+
     "JANUARY": "Sausis",
     "FEBRUARY": "Vasaris",
     "MARCH": "Kovas",
@@ -26,7 +42,20 @@
     "SEPTEMBER": "Rugsėjis",
     "OCTOBER": "Spalis",
     "NOVEMBER": "Lapkritis",
-    "DECEMBER": "Gruodis"
+    "DECEMBER": "Gruodis",
+
+    "JANUARY_1": "Sausio",
+    "FEBRUARY_1": "Vasario",
+    "MARCH_1": "Kovo",
+    "APRIL_1": "Balandžio",
+    "MAY_1": "Gegužės",
+    "JUNE_1": "Birželio",
+    "JULY_1": "Liepos",
+    "AUGUST_1": "Rugpjūčio",
+    "SEPTEMBER_1": "Rugsėjo",
+    "OCTOBER_1": "Spalio",
+    "NOVEMBER_1": "Lapkričio",
+    "DECEMBER_1": "Gruodžio"
   },
   "Weather": {
     "RAIN_PROBABILITY": "Lietaus tikimybė %",

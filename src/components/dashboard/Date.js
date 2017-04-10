@@ -1,7 +1,7 @@
 import React from 'react';
 import Translate from 'react-translate-component';
 
-class DateC extends React.Component {
+class Date extends React.Component {
   constructor(props){
     super(props);
 
@@ -50,7 +50,7 @@ class DateC extends React.Component {
   }
 }
 
-DateC.propTypes = {
+Date.propTypes = {
 };
 
-export default DateC;
+export default Date;

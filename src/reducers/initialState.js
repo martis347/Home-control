@@ -14,7 +14,13 @@ export default {
       year: 0
     }
   },
-  weather: [],
+  weather: {
+    weather: [],
+    darkskyWeather: {
+      daily: [],
+      today: {}
+    }
+  },
   locale: 'en',
   phpApiResult: {
     comic: '',

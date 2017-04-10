@@ -15,6 +15,14 @@
     "SATURDAY": "Sa",
     "SUNDAY": "Su",
 
+    "MONDAY_1": "Mon",
+    "TUESDAY_1": "Tue",
+    "WEDNESDAY_1": "Wed",
+    "THURSDAY_1": "Thu",
+    "FRIDAY_1": "Fri",
+    "SATURDAY_1": "Sat",
+    "SUNDAY_1": "Sun",
+
     "MONDAY_LONG": "Monday",
     "TUESDAY_LONG": "Tuesday",
     "WEDNESDAY_LONG": "Wednesday",
@@ -34,7 +42,20 @@
     "SEPTEMBER": "September",
     "OCTOBER": "October",
     "NOVEMBER": "November",
-    "DECEMBER": "December"
+    "DECEMBER": "December",
+
+    "JANUARY_1": "January",
+    "FEBRUARY_1": "February",
+    "MARCH_1": "March",
+    "APRIL_1": "April",
+    "MAY_1": "May",
+    "JUNE_1": "June",
+    "JULY_1": "July",
+    "AUGUST_1": "August",
+    "SEPTEMBER_1": "September",
+    "OCTOBER_1": "October",
+    "NOVEMBER_1": "November",
+    "DECEMBER_1": "December"
   },
   "Weather": {
     "RAIN_PROBABILITY": "Rain probability %",

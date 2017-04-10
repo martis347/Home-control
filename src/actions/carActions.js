@@ -15,7 +15,7 @@ export function carRate(car) {
     };
 
     options.body = JSON.stringify(car);
-    return fetch('http://78.63.201.236:100/api/cars', options).then(result => {
+    return fetch('http://localhost:100/api/cars', options).then(result => {
       return result.json();
     }).then(result => dispatch(getCarRate(result)));
   };
