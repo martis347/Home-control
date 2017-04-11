@@ -31,7 +31,7 @@ class WeatherChart extends React.Component {
   render() {
     return (
       <div className="weather-chart">
-        <ComposedChart width={window.innerWidth / 5} height={window.innerHeight / 3} data={this.state.data} margin={{top: 40, right: 10}}>
+        <ComposedChart width={window.innerWidth /2} height={window.innerHeight / 3} data={this.state.data} margin={{top: 40, right: 10}}>
           <YAxis hide={true} domain={[this.state.minTemp, this.state.maxTemp]} axisLine={false} tickLine={false} orientation={'right'} yAxisId={'right'}/>
           <YAxis hide={!this.state.mightRain} axisLine={false} domain={[0, 100]} tickLine={false} orientation={'left'} label={'%'} yAxisId={'left'}/>
           {this.state.mightRain &&

@@ -322,7 +322,7 @@ ul {
 
 .weather-chart {
   position: absolute; /* or absolute */
-  top: 50%;
+  bottom: 0;
   right:40%;
 }
 
