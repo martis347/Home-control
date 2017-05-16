@@ -12,21 +12,23 @@ class Slider extends React.Component {
       min: 0,
       mode: "none",
       rainbowSpeed: 0,
-      connection: {}
+      connection: {},
+      stepSize: 1,
+      kof: 10.24
     };
 
     this.updateState = this.updateState.bind(this);
     this.updateSliders = this.updateSliders.bind(this);
   }
   componentWillMount() {
-    let connection = new WebSocket('ws://192.168.31.210:81/', ['arduino']);
+    let connection = new WebSocket('ws://192.168.31.243:81/', ['arduino']);
     this.setState({connection});
     connection.onmessage = this.updateState;
   }
 
   updateState = function (value) {
     let values = value.data.split(' ');
-    this.setState({mode: values[1], n1:parseInt(values[2]), n2:parseInt(values[3]), n3:parseInt(values[4])}, this.updateSliders);
+    this.setState({mode: values[1], n1:Math.round(parseInt(values[2]) / this.state.kof), n2:Math.round(parseInt(values[3]) / this.state.kof), n3:Math.round(parseInt(values[4]) / this.state.kof)}, this.updateSliders);
   };
 
   updateSliders = function () {
@@ -49,11 +51,12 @@ class Slider extends React.Component {
   };
 
   onRadioChange = value => {
+    console.log(value);
     this.setState({mode: value.target.value}, () => {this.sendSocket(true);});
   };
 
   buildQuery = (broadcast) => {
-    return "1 " + this.state.mode + " " + this.state.n1 + " " + this.state.n2 + " " + this.state.n3 + " " + (broadcast ? "1" : "0");
+    return "1 " + this.state.mode + " " + Math.round(this.state.n1 * this.state.kof) + " " + Math.round(this.state.n2 * this.state.kof) + " " + Math.round(this.state.n3 * this.state.kof) + " " + (broadcast ? "1" : "0");
   };
 
   sendSocket = (broadcast) => {
@@ -113,7 +116,7 @@ class Slider extends React.Component {
                      onChange={this.onSliderChange}
                      onMouseUp={this.broadcastSliderValue}
                      onTouchEnd ={this.broadcastSliderValue}
-                     step ={5}
+                     step ={this.state.stepSize}
               />
             </div>
           </div>}
@@ -128,7 +131,7 @@ class Slider extends React.Component {
                    onChange={this.onSliderChange}
                    onMouseUp={this.broadcastSliderValue}
                    onTouchEnd ={this.broadcastSliderValue}
-                   step ={5}
+                   step ={this.state.stepSize}
             />
           </div>}
           {this.state.mode === "a" &&
@@ -143,7 +146,7 @@ class Slider extends React.Component {
                      onChange={this.onSliderChange}
                      onMouseUp={this.broadcastSliderValue}
                      onTouchEnd ={this.broadcastSliderValue}
-                     step ={5}
+                     step ={this.state.stepSize}
               />
             </div>
             <div>
@@ -156,7 +159,7 @@ class Slider extends React.Component {
                      onChange={this.onSliderChange}
                      onMouseUp={this.broadcastSliderValue}
                      onTouchEnd ={this.broadcastSliderValue}
-                     step ={5}
+                     step ={this.state.stepSize}
               />
             </div>
             <div>
@@ -169,11 +172,11 @@ class Slider extends React.Component {
                      onChange={this.onSliderChange}
                      onMouseUp={this.broadcastSliderValue}
                      onTouchEnd ={this.broadcastSliderValue}
-                     step ={5}
+                     step ={this.state.stepSize}
               />
             </div>
             <br/>
-            <div className="colorTest" style={{backgroundColor: 'rgb(' + Math.ceil(this.state.n1 * 2.55) + ',' + Math.ceil(this.state.n2 * 2.55) + ',' + Math.ceil(this.state.n3 * 2.55) + ')'}}/>
+            <div className="colorTest" style={{backgroundColor: 'rgb(' + Math.round(this.state.n1 * 2.55) + ',' + Math.round(this.state.n2 * 2.55) + ',' + Math.round(this.state.n3 * 2.55) + ')'}}/>
           </div>}
         </div>
         </div>
