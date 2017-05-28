@@ -15,9 +15,9 @@ export default {
     }
   },
   weather: {
-    weather: [],
     darkskyWeather: {
       daily: [],
+      hourly: [],
       today: {}
     }
   },

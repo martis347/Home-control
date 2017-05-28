@@ -48,7 +48,7 @@ class WeatherChart extends React.Component {
 }
 
 WeatherChart.propTypes = {
-  active: PropTypes.bool.isRequired,
+  active: PropTypes.bool,
   data: PropTypes.object.isRequired
 };
 

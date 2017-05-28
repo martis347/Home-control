@@ -30,7 +30,7 @@ class ClockContainer extends React.Component {
   componentWillMount() {
     this.props.clockActions.tick();
 
-    this.props.weatherActions.requestWeather()
+    this.props.weatherActions.requestWeatherDarksky()
       .then(this.setState({active: !this.state.active}))
       .catch(error => console.log(error));
     document.body.classList.toggle('dark', true);
@@ -42,7 +42,7 @@ class ClockContainer extends React.Component {
     }.bind(this), 1000);
 
     window.setInterval(function () {
-      this.props.weatherActions.requestWeather()
+      this.props.weatherActions.requestWeatherDarksky()
         .then(this.setState({active: !this.state.active}))
         .catch(error => console.log(error));
     }.bind(this), 600000);
@@ -63,7 +63,7 @@ class ClockContainer extends React.Component {
       <div>
         <Clock time={this.props.time}/>
         <Calendar calendar={this.props.calendar}/>
-        <Weather data={this.props.weather} active={this.state.active}/> <Weather data={this.props.weather} active={!this.state.active}/>
+        <Weather data={this.props.darkskyWeather.hourly} active={this.state.active}/> <Weather data={this.props.darkskyWeather.hourly} active={!this.state.active}/>
         <RandomComic image={this.state.phpResult.comic}/>
         <Quote className={'quote-bottom'} text={this.state.phpResult.quotes.humorists}/>
       </div>
@@ -85,7 +85,7 @@ function mapStateToProps(state) {
   return {
     time: state.clock.time,
     calendar: state.clock.calendar,
-    weather: state.weather.weather,
+    darkskyWeather: state.weather.darkskyWeather,
     phpResult: state.php
   };
 }

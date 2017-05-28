@@ -17,7 +17,7 @@ class Weather extends React.Component {
   }
 
   componentWillReceiveProps(nextProp) {
-    if (this.state.data != nextProp.data) {
+    if (this.state.data != nextProp.data && nextProp.data) {
       this.setState({
         data: nextProp.data,
         mightRain: nextProp.data.some(Weather.mightRain)

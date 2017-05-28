@@ -16,9 +16,6 @@ class DashboardContainer extends React.Component {
   }
 
   componentWillMount() {
-    this.props.weatherActions.requestWeather()
-      .then(this.setState({active: !this.state.active}))
-      .catch(error => console.log(error));
 
     this.props.weatherActions.requestWeatherDarksky()
       .catch(error => console.log(error));
@@ -28,10 +25,6 @@ class DashboardContainer extends React.Component {
 
   componentDidMount() {
     window.setInterval(function () {
-      this.props.weatherActions.requestWeather()
-        .then(this.setState({active: !this.state.active}))
-        .catch(error => console.log(error));
-
       this.props.weatherActions.requestWeatherDarksky()
         .then(this.setState({active: !this.state.active}))
         .catch(error => console.log(error));
@@ -48,7 +41,7 @@ class DashboardContainer extends React.Component {
         <Clock/>
         <Date/>
         <Weather data={this.props.darkskyWeather.today}/>
-        <WeatherChart active={true} data={this.props.weather}/>
+        <WeatherChart active={true} data={this.props.darkskyWeather.hourly}/>
         <FutureWeather data={this.props.darkskyWeather.daily}/>
       </div>
     );
@@ -57,7 +50,6 @@ class DashboardContainer extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    weather: state.weather.weather,
     darkskyWeather: state.weather.darkskyWeather
   };
 }
