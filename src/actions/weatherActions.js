@@ -18,12 +18,12 @@ export function mapWeatherDataDarkSky(allData) {
     }),
     hourly: allData.hourly.data.map(data => {
       return {
-        temperature: Math.round((data.temperature - 32) * 5 / 9),
-        rainProbability: data.precipProbability,
+        temperature: Math.round(((data.temperature - 32) * 5 / 9) * 10) / 10,
+        rainProbability: data.precipProbability * 100,
         realFeelTemperature: Math.round((data.apparentTemperature - 32) * 5 / 9),
         hour: new Date(data.time * 1000).getHours()
       };
-    }).slice(0,12),
+    }).slice(0,18),
     today: {
       temperature: (allData.currently.temperature - 32) * 5 / 9,
       icon: allData.currently.icon
